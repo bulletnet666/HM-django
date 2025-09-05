@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="container-sm p-5 my-5 bg-dark text-white" style="border-radius: 50px; max-width: 500px;">
+    <h2>REGISTER FORM</h2>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">REGISTER</button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>LOGIN</h2>
+<div class="container-sm p-5 my-5 bg-dark text-white" style="border-radius: 50px; max-width: 500px;">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">LOGIN</button>
+    </form>
+    <a class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="{% url 'register' %}" style="text-decoration: None;">Don't have an Account?</a>
+</div>
+{% endblock %}
